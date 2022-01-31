@@ -33,6 +33,8 @@ class AddFragment : Fragment() {
         // Set Menu
         setHasOptionsMenu(true)
 
+        binding.prioritiesSpinner.onItemSelectedListener = mShareViewModel.listener
+
         return binding.root
     }
 
