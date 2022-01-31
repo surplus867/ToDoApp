@@ -27,7 +27,7 @@
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginBottom="24dp"
             android:clickable="true"
             android:contentDescription="@string/todo"
@@ -41,7 +41,7 @@
         <ImageView
             android:id="@+id/no_data_imageView"
             android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_no_data"
             android:visibility="invisible"
