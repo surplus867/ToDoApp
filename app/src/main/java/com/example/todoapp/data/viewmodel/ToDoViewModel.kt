@@ -1,6 +1,7 @@
 package com.example.todoapp.data.viewmodel
 
 import android.app.Application
+import android.app.DownloadManager
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -39,5 +40,9 @@ class ToDoViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAll()
         }
+    }
+
+    fun searchDatabase(searchQuery: String): LiveData<List<ToDoData>> {
+        return repository.searchDatabase(searchQuery)
     }
 }
