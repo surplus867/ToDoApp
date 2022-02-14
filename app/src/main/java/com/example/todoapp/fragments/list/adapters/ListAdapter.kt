@@ -1,4 +1,4 @@
-package com.example.todoapp.fragments.list
+package com.example.todoapp.fragments.list.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import com.example.todoapp.databinding.RowLayoutBinding
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
-     private var dataList = emptyList<ToDoData>()
+    var dataList = emptyList<ToDoData>()
 
     class MyViewHolder(private val binding: RowLayoutBinding): RecyclerView.ViewHolder(binding.root) {
 
