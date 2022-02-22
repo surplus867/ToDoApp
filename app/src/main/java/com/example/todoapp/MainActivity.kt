@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +23,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+            supportFragmentManager.
+            findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
-        NavigationUI.setupActionBarWithNavController(this, navController)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        setupActionBarWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.navHostFragment)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
